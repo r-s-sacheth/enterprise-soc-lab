@@ -101,27 +101,6 @@ CYBERLAB.LOCAL
 * [ ] Incident investigations
 * [ ] Incident response documentation
 
-## Repository Structure
-
-```text
-enterprise-soc-lab/
-│
-├── README.md
-│
-├── architecture/
-├── documentation/
-├── screenshots/
-│   ├── ad/
-│   └── network/
-│
-├── detections/
-├── sigma/
-├── splunk/
-├── incidents/
-├── threat-hunting/
-└── mitre-attack/
-```
-
 ## Status
 
 **Current phase:** Active Directory and domain environment completed. Security monitoring and detection engineering are next.
