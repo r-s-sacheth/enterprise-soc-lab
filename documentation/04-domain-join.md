@@ -117,11 +117,7 @@ The **domain Administrator account** was used for the initial domain join.
 
 This is different from the local administrator account that was used before `CLIENT01` joined the domain.
 
-The credentials were entered using the domain account associated with:
-
-```text
-CYBERLAB
-```
+The credentials were entered using the domain account associated with `CYBERLAB`
 
 After successful authentication, Windows confirmed that the computer had joined the `cyberlab.local` domain.
 
@@ -184,13 +180,7 @@ This confirmed that authentication was being handled by the domain controller.
 
 ## Computer Object Placement
 
-When a computer initially joins an Active Directory domain, its computer object is normally placed in the default:
-
-```text
-Computers
-```
-
-container.
+When a computer initially joins an Active Directory domain, its computer object is normally placed in the default `Computers` container.
 
 After joining the domain, `CLIENT01` was moved to the custom computer structure created for the lab.
 
