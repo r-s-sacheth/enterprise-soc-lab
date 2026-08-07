@@ -43,11 +43,9 @@ After installing the required roles, `DC01` was promoted to a domain controller.
 The deployment wizard was configured with:
 
 ```text
-Deployment Type:
-Add a new forest
+Deployment Type: Add a new forest
 
-Root domain name:
-cyberlab.local
+Root domain name: cyberlab.local
 ```
 
 The domain controller was then restarted after promotion.
@@ -87,8 +85,7 @@ DNS is a critical dependency for Active Directory.
 The internal DNS server for the domain is `DC01`:
 
 ```text
-DNS Server:
-192.168.100.10
+DNS Server: 192.168.100.10
 ```
 
 The domain uses:
