@@ -88,9 +88,9 @@ CYBERLAB.LOCAL
 * [x] Users and security groups
 * [x] Domain join
 * [x] Computer organization
-* [ ] Group Policy configuration
-* [ ] Windows security auditing
-* [ ] Sysmon deployment
+* [x] Group Policy configuration
+* [x] Windows security auditing
+* [x] Sysmon deployment
 * [ ] SOC01 monitoring stack
 * [ ] Centralized log collection
 * [ ] Detection engineering
@@ -103,4 +103,4 @@ CYBERLAB.LOCAL
 
 ## Status
 
-**Current phase:** Active Directory and domain environment completed. Security monitoring and detection engineering are next.
+**Current phase:** Windows security monitoring configured. SOC01 monitoring and centralized log collection are next.
