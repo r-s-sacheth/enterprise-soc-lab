@@ -91,8 +91,8 @@ CYBERLAB.LOCAL
 * [x] Group Policy configuration
 * [x] Windows security auditing
 * [x] Sysmon deployment
-* [ ] SOC01 monitoring stack
-* [ ] Centralized log collection
+* [x] SOC01 monitoring stack
+* [x] Centralized log collection
 * [ ] Detection engineering
 * [ ] Sigma rules
 * [ ] Threat hunting
@@ -103,4 +103,4 @@ CYBERLAB.LOCAL
 
 ## Status
 
-**Current phase:** Windows security monitoring configured. SOC01 monitoring and centralized log collection are next.
+**Current phase:** SOC01 monitoring platform and centralized telemetry collection configured. Detection engineering is next.
