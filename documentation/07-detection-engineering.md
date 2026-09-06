@@ -162,6 +162,9 @@ It then matches the process image:
 
 Multiple `<field>` conditions within the same rule provide AND-style matching, allowing detections to express more specific behavior.
 
+![local_rules.xml — full custom ruleset](../images/07/local-rules-full.png)
+*The complete set of four custom detections as deployed on `SOC01`.*
+
 ---
 
 # 4. Detection 01 — PowerShell Process Execution
@@ -217,6 +220,10 @@ Validation was performed against:
 ```
 
 rather than relying solely on the Wazuh Dashboard.
+
+![Rule 100002 alert — PowerShell process execution](../images/07/rule-100002-alert.png)
+*Live alert confirming rule 100002. 24 hits recorded over the past month, 
+reflecting routine PowerShell activity generated across multiple testing sessions.*
 
 ## Debugging
 
@@ -517,6 +524,11 @@ then generated its own alert successfully.
 
 This confirmed that the custom rule was providing distinct coverage rather than simply duplicating rule `92057`.
 
+![Rule 100004 alert — encoded PowerShell from cmd.exe parent](../images/07/rule-100004-alert.png)
+*Alert generated during the final validation scenario (cmd.exe → powershell.exe -EncodedCommand). 
+The encoded payload shown differs from the illustrative example in Section 6.1, 
+which used an earlier, separate test run.*
+
 ---
 
 # 7. Detection 03 — cmd.exe Spawned by PowerShell
@@ -587,6 +599,10 @@ A controlled PowerShell → cmd.exe execution was generated on `CLIENT01`.
 The event was received by `SOC01` and the custom rule generated the expected alert.
 
 No additional debugging was required because the field structure and decoder behavior had already been established during Detection 01.
+
+![Rule 100003 alert — cmd.exe spawned by PowerShell](../images/07/rule-100003-alert.png)
+*Live alert confirming rule 100003, showing the parent→child relationship 
+(`powershell.exe` → `cmd.exe`) rendered directly in the rule's description field.*
 
 ---
 
@@ -700,6 +716,10 @@ The alert was verified in:
 
 This confirmed that Windows Security authentication telemetry could be used alongside Sysmon telemetry within the same detection-engineering workflow.
 
+![Rule 100005 alert — failed interactive logon](../images/07/rule-100005-alert.png)
+*Live alert confirming rule 100005, sourced from Windows Security Event 4625 
+rather than Sysmon — the only detection in this set using authentication telemetry.*
+
 ---
 
 # 10. Dashboard Validation
@@ -723,6 +743,14 @@ Dashboard visualization is primarily useful for:
 * Portfolio screenshots
 
 Dashboard screenshots can therefore be added later without changing the underlying detection-validation results documented in this phase.
+
+![CLIENT01 agent status](../images/07/agent-active.png)
+*Confirms the Wazuh agent on CLIENT01 remained active throughout testing — 
+the prerequisite for every alert documented in this phase.*
+
+Dashboard screenshots for all four detections (Sections 4, 6.5, 7, and 9) have 
+since been captured and are included inline above, alongside the `alerts.json` 
+evidence that served as the primary validation source.
 
 ---
 
