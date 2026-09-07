@@ -93,7 +93,7 @@ CYBERLAB.LOCAL
 * [x] Sysmon deployment
 * [x] SOC01 monitoring stack
 * [x] Centralized log collection
-* [ ] Detection engineering
+* [x] Detection engineering
 * [ ] Sigma rules
 * [ ] Threat hunting
 * [ ] MITRE ATT&CK mapping
