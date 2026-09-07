@@ -93,7 +93,7 @@ CYBERLAB.LOCAL
 * [x] Sysmon deployment
 * [x] SOC01 monitoring stack
 * [x] Centralized log collection
-* [x] Detection engineering
+* [x] Detection engineering (4 custom Wazuh rules, MITRE-mapped, live-validated)
 * [ ] Sigma rules
 * [ ] Threat hunting
 * [ ] MITRE ATT&CK mapping
@@ -102,5 +102,4 @@ CYBERLAB.LOCAL
 * [ ] Incident response documentation
 
 ## Status
-
-**Current phase:** SOC01 monitoring platform and centralized telemetry collection configured. Detection engineering is next.
+**Current phase:** Detection engineering complete — four custom Wazuh detections built, validated against live telemetry, and documented (see `07-detection-engineering.md`). Sigma rule translation is in progress.
