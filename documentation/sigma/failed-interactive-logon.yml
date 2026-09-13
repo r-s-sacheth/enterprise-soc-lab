@@ -1,0 +1,23 @@
+title: Failed Interactive Logon
+id: be319fa2-79d2-4a04-a03d-eb3505c06387
+status: experimental
+description: Detects a failed interactive logon attempt (Event ID 4625, Logon Type 2)
+references:
+    - internal://detection-engineering
+author: R S Sacheth
+date: 2026/09/11
+tags:
+    - attack.t1110
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4625
+        LogonType: 2
+    condition: selection
+falsepositives:
+    - Users mistyping passwords
+    - Forgotten credentials
+    - Normal authentication errors
+level: low

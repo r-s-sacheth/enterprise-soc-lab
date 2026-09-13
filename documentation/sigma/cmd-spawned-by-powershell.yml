@@ -1,0 +1,25 @@
+title: cmd.exe Spawned Directly by PowerShell
+id: 7e22801c-bf87-49c0-8502-c503a2dda24a
+status: experimental
+description: Detects cmd.exe launched directly by powershell.exe or pwsh.exe
+references:
+    - internal://detection-engineering
+author: R S Sacheth
+date: 2026/09/11
+tags:
+    - attack.execution
+    - attack.t1059.003
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\cmd.exe'
+        ParentImage|endswith:
+            - '\powershell.exe'
+            - '\pwsh.exe'
+    condition: selection
+falsepositives:
+    - Legitimate scripts that shell out to cmd.exe for batch-file compatibility
+    - Administrative automation
+level: medium
