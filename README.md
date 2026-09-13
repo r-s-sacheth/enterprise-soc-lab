@@ -94,7 +94,7 @@ CYBERLAB.LOCAL
 * [x] SOC01 monitoring stack
 * [x] Centralized log collection
 * [x] Detection engineering (4 custom Wazuh rules, MITRE-mapped, live-validated)
-* [ ] Sigma rules
+* [x] Sigma rules (4 rules translated, converted, and validated against real telemetry)
 * [ ] Threat hunting
 * [ ] MITRE ATT&CK mapping
 * [ ] Attack simulations
@@ -102,4 +102,4 @@ CYBERLAB.LOCAL
 * [ ] Incident response documentation
 
 ## Status
-**Current phase:** Detection engineering complete — four custom Wazuh detections built, validated against live telemetry, and documented (see `07-detection-engineering.md`). Sigma rule translation is in progress.
+**Current phase:** Sigma rule translation complete — four Sigma rules written, schema-validated, converted, and confirmed against real Wazuh telemetry corresponding to the detections built in Phase 07 (see `08-sigma-rules.md`). Threat hunting is next.
