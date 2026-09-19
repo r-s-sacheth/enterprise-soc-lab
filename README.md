@@ -96,10 +96,10 @@ CYBERLAB.LOCAL
 * [x] Detection engineering (4 custom Wazuh rules, MITRE-mapped, live-validated)
 * [x] Sigma rules (4 rules translated, converted, and validated against real telemetry)
 * [x] Threat hunting (4 hunts against real telemetry; 1 coverage gap identified)
-* [ ] MITRE ATT&CK mapping
+* [x] MITRE ATT&CK mapping (Detected/Hunted/Gap coverage matrix across Phases 07–09)
 * [ ] Attack simulations
 * [ ] Incident investigations
 * [ ] Incident response documentation
 
 ## Status
-**Current phase:** Threat hunting complete — four hunts conducted against real telemetry, extending visibility beyond the four existing Wazuh detections. Three hunts confirmed clean baselines; one identified a genuine coverage gap (Logon Type 11 authentication failures, currently unaddressed by rule 100005) that has been documented and deferred to a future detection-engineering cycle (see `09-threat-hunting.md`). MITRE ATT&CK mapping is next.
+**Current phase:** MITRE ATT&CK mapping complete — detections, hunts, and the Logon Type 11 coverage gap consolidated into a single evidence-based coverage matrix, distinguishing validated detections from manually-hunted behavior and confirmed visibility gaps (see `10-mitre-attack-mapping.md`). Attack simulations are next.
