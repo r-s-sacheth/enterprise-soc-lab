@@ -71,12 +71,12 @@ A technique appearing under "Detected" or "Hunted" does not mean every variant o
 
 ## 3. Detection Coverage
 
-| Technique        | Name                                        | Detection     | Telemetry                 | Validation                                                          |
-| ---------------- | ------------------------------------------- | ------------- | ------------------------- | ------------------------------------------------------------------- |
-| T1059.001        | PowerShell                                  | Rule `100002` | Sysmon EID 1              | Validated — `07-detection-engineering.md` §4                        |
-| T1059.001, T1027 | PowerShell; Obfuscated Files or Information | Rule `100004` | Sysmon EID 1              | Validated — `07-detection-engineering.md` §5                        |
-| T1059.003        | Windows Command Shell                       | Rule `100003` | Sysmon EID 1              | Validated — `07-detection-engineering.md` §7                        |
-| T1110            | Brute Force                                 | Rule `100005` | Windows Security EID 4625 | Validated — `07-detection-engineering.md` §8 (see scope note below) |
+| Technique        | Name                                        | Detection     | Telemetry                 | Validation                                                                 |
+| ---------------- | ------------------------------------------- | ------------- | ------------------------- | -------------------------------------------------------------------------- |
+| T1059.001        | PowerShell                                  | Rule `100002` | Sysmon EID 1              | Validated — `07-detection-engineering.md` Section 4                        |
+| T1059.001, T1027 | PowerShell; Obfuscated Files or Information | Rule `100004` | Sysmon EID 1              | Validated — `07-detection-engineering.md` Section 5                        |
+| T1059.003        | Windows Command Shell                       | Rule `100003` | Sysmon EID 1              | Validated — `07-detection-engineering.md` Section 7                        |
+| T1110            | Brute Force                                 | Rule `100005` | Windows Security EID 4625 | Validated — `07-detection-engineering.md` Section 8 (see scope note below) |
 
 
 Each of these detections also has a corresponding Sigma translation, independently validated against Wazuh's OpenSearch backend (`08-sigma-rules.md`), confirming the same detection logic is portable beyond Wazuh's specific rule syntax.
@@ -87,12 +87,12 @@ Each of these detections also has a corresponding Sigma translation, independent
 
 ## 4. Threat Hunting Coverage
 
-| Hunt                                 | Technique(s)        | Outcome                                                                            | Evidence                  |
-| ------------------------------------ | ------------------- | ---------------------------------------------------------------------------------- | ------------------------- |
-| 01 — Unusual PowerShell parents      | T1059.001 (context) | No unexplained activity observed                                                   | `09-threat-hunting.md` §5 |
-| 02 — Rare process relationships      | —                   | No unexplained activity observed; no single technique fit the hunt's general scope | `09-threat-hunting.md` §6 |
-| 03 — Obfuscation indicators          | T1027, T1140        | No observed activity to evaluate                                                   | `09-threat-hunting.md` §7 |
-| 04 — Authentication failure patterns | T1110 (context)     | **Coverage gap identified** — see Section 7                                        | `09-threat-hunting.md` §8 |
+| Hunt                                 | Technique(s)        | Outcome                                                                            | Evidence                         |
+| ------------------------------------ | ------------------- | ---------------------------------------------------------------------------------- | -------------------------------- |
+| 01 — Unusual PowerShell parents      | T1059.001 (context) | No unexplained activity observed                                                   | `09-threat-hunting.md` Section 5 |
+| 02 — Rare process relationships      | —                   | No unexplained activity observed; no single technique fit the hunt's general scope | `09-threat-hunting.md` Section 6 |
+| 03 — Obfuscation indicators          | T1027, T1140        | No observed activity to evaluate                                                   | `09-threat-hunting.md` Section 7 |
+| 04 — Authentication failure patterns | T1110 (context)     | **Coverage gap identified** — see Section 7                                        | `09-threat-hunting.md` Section 8 |
 
 
 Hunt 02 is intentionally left without a technique mapping. It investigated parent-child process relationships broadly, rather than one specific execution pattern, and forcing a technique ID onto it would overstate what was actually examined.
@@ -146,7 +146,7 @@ Not demonstrated:
   An actual brute-force campaign
 ```
 
-The rule detects the underlying event type a brute-force campaign would generate, but the lab has not yet simulated or validated detection of the campaign pattern itself. This is a deliberate scope boundary, not an oversight — correlation-based detection is deferred to future detection-engineering work (see `07-detection-engineering.md` §18).
+The rule detects the underlying event type a brute-force campaign would generate, but the lab has not yet simulated or validated detection of the campaign pattern itself. This is a deliberate scope boundary, not an oversight — correlation-based detection is deferred to future detection-engineering work (see `07-detection-engineering.md` Section 18).
 
 ---
 

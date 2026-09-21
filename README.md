@@ -97,9 +97,9 @@ CYBERLAB.LOCAL
 * [x] Sigma rules (4 rules translated, converted, and validated against real telemetry)
 * [x] Threat hunting (4 hunts against real telemetry; 1 coverage gap identified)
 * [x] MITRE ATT&CK mapping (Detected/Hunted/Gap coverage matrix across Phases 07–09)
-* [ ] Attack simulations
+* [x] Attack simulations (multi-step chain + Logon Type 11 gap reproduction; 2 new coverage findings)
 * [ ] Incident investigations
 * [ ] Incident response documentation
 
 ## Status
-**Current phase:** MITRE ATT&CK mapping complete — detections, hunts, and the Logon Type 11 coverage gap consolidated into a single evidence-based coverage matrix, distinguishing validated detections from manually-hunted behavior and confirmed visibility gaps (see `10-mitre-attack-mapping.md`). Attack simulations are next.
+**Current phase:** Attack simulations complete — a four-step attack chain (execution, evasion, pivot, discovery) validated Phase 07's detections in sequence and surfaced previously unidentified default-rule coverage alongside a genuine discovery-technique gap; a deliberate reproduction of the Logon Type 11 gap characterized its dual-event mechanism precisely (see `11-attack-simulations.md`). Incident investigations are next.
