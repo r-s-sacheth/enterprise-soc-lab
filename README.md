@@ -98,8 +98,8 @@ CYBERLAB.LOCAL
 * [x] Threat hunting (4 hunts against real telemetry; 1 coverage gap identified)
 * [x] MITRE ATT&CK mapping (Detected/Hunted/Gap coverage matrix across Phases 07–09)
 * [x] Attack simulations (multi-step chain + Logon Type 11 gap reproduction; 2 new coverage findings)
-* [ ] Incident investigations
+* [ ] Incident investigations (2 incidents reconstructed from telemetry alone, analyst-triage posture)
 * [ ] Incident response documentation
 
 ## Status
-**Current phase:** Attack simulations complete — a four-step attack chain (execution, evasion, pivot, discovery) validated Phase 07's detections in sequence and surfaced previously unidentified default-rule coverage alongside a genuine discovery-technique gap; a deliberate reproduction of the Logon Type 11 gap characterized its dual-event mechanism precisely (see `11-attack-simulations.md`). Incident investigations are next.
+**Current phase:** Incident investigations complete — two incidents reconstructed from Phase 11 telemetry using an alert-first, triage-by-severity approach: a multi-step execution chain traced backward from its highest-severity alert to establish a full timeline, and a dual-event authentication anomaly correlated at the field level to confirm it represented one logical event rather than two (see `12-incident-investigations.md`). Incident response documentation is next.
