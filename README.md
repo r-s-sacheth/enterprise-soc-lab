@@ -93,13 +93,13 @@ CYBERLAB.LOCAL
 * [x] Sysmon deployment
 * [x] SOC01 monitoring stack
 * [x] Centralized log collection
-* [x] Detection engineering (4 custom Wazuh rules, MITRE-mapped, live-validated)
+* [x] Detection engineering (5 custom Wazuh rules, MITRE-mapped, live-validated)
 * [x] Sigma rules (4 rules translated, converted, and validated against real telemetry)
 * [x] Threat hunting (4 hunts against real telemetry; 1 coverage gap identified)
 * [x] MITRE ATT&CK mapping (Detected/Hunted/Gap coverage matrix across Phases 07–09)
 * [x] Attack simulations (multi-step chain + Logon Type 11 gap reproduction; 2 new coverage findings)
-* [ ] Incident investigations (2 incidents reconstructed from telemetry alone, analyst-triage posture)
-* [ ] Incident response documentation
+* [x] Incident investigations (2 incidents reconstructed from telemetry alone, analyst-triage posture)
+* [x] Incident response documentation (formal IR reports; Logon Type 11 gap closed with rule 100006)
 
 ## Status
-**Current phase:** Incident investigations complete — two incidents reconstructed from Phase 11 telemetry using an alert-first, triage-by-severity approach: a multi-step execution chain traced backward from its highest-severity alert to establish a full timeline, and a dual-event authentication anomaly correlated at the field level to confirm it represented one logical event rather than two (see `12-incident-investigations.md`). Incident response documentation is next.
+**Project complete.** All thirteen phases documented, from initial Active Directory and Wazuh deployment through detection engineering, Sigma translation, threat hunting, MITRE ATT&CK mapping, attack simulation, incident investigation, and incident response. One detection gap — Logon Type 11 authentication failures — was carried through the full cycle: identified by threat hunting (`09`), reproduced by simulation (`11`), investigated as an incident (`12`), and resolved with a new, validated rule (`13`). See `documentation/` for the complete phase-by-phase write-up.
