@@ -1,5 +1,11 @@
 # 07 — Detection Engineering
 
+> **Update (Phase 13):** a fifth detection, rule `100006`, was added after 
+> this phase concluded, closing a gap identified in Phase 09 and 
+> investigated in Phase 12. See `13-incident-response.md` for details. 
+> The four-detection scope described below reflects this phase as 
+> originally completed.
+
 ## Overview
 
 With centralized telemetry from `CLIENT01` confirmed in `06-soc01-security-monitoring-platform.md`, this phase moves from log collection to detection engineering — writing, testing, validating, and documenting custom Wazuh rules against real security-relevant behavior.

@@ -1,5 +1,11 @@
 # 10 — MITRE ATT&CK Mapping
 
+> **Update (Phase 13):** rule `100006` was added after this mapping was 
+> written, extending detection coverage to Logon Type 11 and closing the 
+> gap described in Section 7 below. The coverage matrix in this document 
+> reflects the state of the lab as of Phase 10; see `13-incident-response.md` 
+> for the resolution.
+
 ## Overview
 
 This phase consolidates the detection and hunting work from Phases 07–09 into a single, evidence-based mapping against the MITRE ATT&CK framework. No new telemetry was generated and no new queries were run for this phase — every entry below is drawn directly from validated detections (`07-detection-engineering.md`), Sigma translations (`08-sigma-rules.md`), and hunt findings (`09-threat-hunting.md`) already committed to this repository.
